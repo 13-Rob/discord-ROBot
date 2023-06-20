@@ -5,6 +5,6 @@ module.exports = {
     once: true,
     // When client is ready, run once
     execute(client) {
-        console.log(`Ready! Logged in as ${c.user.tag}`);
+        console.log(`Ready! Logged in as ${client.user.tag}`);
     },
 };

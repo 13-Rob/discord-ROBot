@@ -1,3 +1,4 @@
+// https://discordjs.guide/
 // Node's native file system module
 const fs = require('node:fs');
 
@@ -5,7 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 // Require necessary discord.js classes
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const { token } = require('./config.json');
 
 // New client instance
@@ -77,7 +78,7 @@ for (const file of eventFiles) {
     if (event.once) {
         client.once(event.name, (...args) => event.execute(...args));
     } else {
-        client.on(evet.name, (...args) => event.execute(...args));
+        client.on(event.name, (...args) => event.execute(...args));
     }
 }
 
